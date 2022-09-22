@@ -5,6 +5,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background: #e4e6ed;
+    background: rgba(237, 237, 237, 0.82);
     padding: 10px 0;
 }

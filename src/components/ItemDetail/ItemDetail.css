@@ -23,3 +23,14 @@
 .img-container h4, h5, p{
     margin: 10px 0;
 }
+
+.imgCart {
+    width: 80%;
+    height: 355px;
+}
+
+.btnCarrito {
+    position: absolute;
+    top: 80%;
+    right: 10%;
+}

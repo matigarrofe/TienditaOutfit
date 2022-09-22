@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 400px;
     height: auto;
     background: rgb(194, 191, 191);
     color: black;
@@ -18,7 +18,7 @@
     align-items: center;
     padding: 5px;
     
-    width: 90%;
+    width: 60%;
     height: 30px;
 }
 
@@ -39,7 +39,7 @@
     border-radius: 5px;
     background: #101c2b;
     color: white;
-    width: 100%;
+    width: 50%;
     margin: 10px 0;
 }
 .botonAgregar:disabled{
