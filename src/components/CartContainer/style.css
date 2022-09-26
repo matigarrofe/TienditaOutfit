@@ -2,3 +2,9 @@
     font-size: larger;
     
 }
+
+.carro {
+    border: 1px solid black;
+    margin: 2px;
+    background-color: rgba(159, 155, 155, 0.527);
+}

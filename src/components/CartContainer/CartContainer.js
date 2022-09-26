@@ -9,7 +9,7 @@ export const CartContainer = () => {
  
 
   return (
-    <div>
+    <div className='carro'>
       {
         productCartList.length > 0 ?
         <div>
@@ -19,11 +19,11 @@ export const CartContainer = () => {
               <p>Cantidad: {item.quantity}</p>
               <p>Precio unitario: {item.precio}</p>
               <p>Precio productos: {item.quantityPrice}</p>
-              <button onClick={()=>removeItem(item.id)}>Eliminar producto</button>
+              <button className='btn btn-sm bg-danger text-white' onClick={()=>removeItem(item.id)}>Eliminar producto</button>
             </div>
           ))}
-          <button onClick={clear}>Vaciar el carrito</button>
-          <p>Precio total: {getTotalPrecio()}</p>
+          <button className='btn btn-sm bg-primary text-white' onClick={clear}>Vaciar el carrito</button>
+          <p>Precio total: ${  getTotalPrecio()}</p>
         </div>
         :
           <>

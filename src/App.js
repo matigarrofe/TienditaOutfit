@@ -5,7 +5,7 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 import { Navbar } from './components/NavBar/NavBar';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import {BrowserRouter, Routes,Route} from 'react-router-dom';
-import { ContactoPage } from './components/ContactoPage/ContactoPage';
+import { ItemCollection } from './components/ItemCollection/ItemCollection';
 import { CartContainer } from './components/CartContainer/CartContainer';
 import {CartProvider} from "./context/CartContext";
 import { Nosotros } from './components/Nosotros/Nosotros';
@@ -21,7 +21,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<ItemListContainer/>}/>
                 <Route path="/nosotros" element={<Nosotros/>}/>
-                <Route path="/contacto" element={<ContactoPage/>}/>
+                <Route path="/contacto" element={<ItemCollection/>}/>
                 <Route path="/productos" element={<ItemListContainer/>}/>
                 <Route path="/productos/:categoryId" element={<ItemListContainer/>}/>
                 <Route path='/item/:productId' element={<ItemDetailContainer/>}/>
