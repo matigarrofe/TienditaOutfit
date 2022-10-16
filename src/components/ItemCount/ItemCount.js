@@ -1,5 +1,7 @@
 import {useState} from 'react';
 import './ItemCount.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faPlus, faMinus} from '@fortawesome/free-solid-svg-icons'
 
 export const ItemCount = ({stock, initial, onAdd})=>{
     const [count, setCount] = useState(initial);
@@ -20,9 +22,9 @@ export const ItemCount = ({stock, initial, onAdd})=>{
         <div className='estilosContador'>
             <p>Disponible: {stock}</p>
             <div className='contenedorControles'>
-                <button disabled={stock===0} onClick={decrementar} className='botonControl'>-</button>
+            <FontAwesomeIcon icon={faMinus} disabled={stock===0} onClick={decrementar}/>
                 <p>{count}</p>
-                <button disabled={stock===0} onClick={incrementar} className='botonControl'>+</button>
+                    <FontAwesomeIcon icon={faPlus} disabled={stock===0} onClick={incrementar}/>
             </div>
             <button disabled={stock === 0} className='botonAgregar' onClick={()=>onAdd(count)}>Agregar al carrito</button>
         </div>

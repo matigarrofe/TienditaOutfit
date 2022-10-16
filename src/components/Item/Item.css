@@ -1,36 +1,36 @@
 .tarjeta-producto{
-    width: 280px;
+    width: 16rem;
     height: auto;
-    margin: 2px;
-    padding: 5px;
-    background-color:whitesmoke;
-    border-radius: 5px;
+    margin: 5px; 
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* box-shadow: 7px 13px 37px #000; */
+    
 }
 .tarjeta-producto h4, p{
-    margin: 0;
-    color: #243746;
+    margin: 0.5px;
+    color: black;
 }
 .tarjeta-producto img{
-    width: 16rem;
+    width: 14rem;
     height: auto;
 }
-.boton-ver{
-    font-size: 14px;
-    padding: 2px;
-    border-radius: 5px;
-    background-color: rgb(122, 178, 242);
-    color: white;
-    margin: 2px;
+.tarjeta-producto img:hover{
+    width: 14rem;
+    height: auto;
+    filter: saturate(180%);
 }
-.boton-ver:hover {
-    font-size: 14px;
-    padding: 2px;
-    border-radius: 5px;
-    background-color: rgb(242, 192, 122);
-    color: black;
-    margin: 2px;
+
+.btn-dark {
+    color: white;
+}
+.btn-dark:hover {
+    
+    -webkit-transform: scale(0.8);
+-ms-transform: scale(0.8);
+transform: scale(0.8);
+    color: white;
 }

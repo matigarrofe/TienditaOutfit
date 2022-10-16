@@ -5,7 +5,6 @@
     align-items: center;
     width: 400px;
     height: auto;
-    background: rgb(194, 191, 191);
     color: black;
     margin: 10px auto;
     padding: 10px;
@@ -18,30 +17,25 @@
     align-items: center;
     padding: 5px;
     
-    width: 60%;
+    width: 40%;
     height: 30px;
 }
 
-.botonControl {
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
-    color: white;
-    border-radius: 50%;
-    background: #101c2b;
-}
-.botonControl:disabled{
-    background: grey;
-}
+
 
 .botonAgregar {
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
-    background: #101c2b;
+    /* background: #101c2b; */
     color: white;
-    width: 50%;
     margin: 10px 0;
+    background-color: black;
 }
-.botonAgregar:disabled{
-    background: grey;
+
+.botonAgregar:hover {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+        color: white;
 }
+

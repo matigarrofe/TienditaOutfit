@@ -1,0 +1,9 @@
+.carrito {
+    color: #86868b;
+    cursor: pointer;
+}
+.carrito:hover {
+    
+    color: white;
+    cursor: pointer;
+}

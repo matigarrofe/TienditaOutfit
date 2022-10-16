@@ -16,7 +16,7 @@ export const ItemDetail = ({item})=>{
 
     return(
         <div className='detail-container'>
-            <h1 style={{width: "100%"}}>Producto detallado</h1>
+            <h1 style={{width: "100%", color: 'black'}}>Detalle del Producto</h1>
             
             <div className='row pt=5 img-container'>
                 <div className='col-md-6 imgCart'><img src={item.pictureUrl} alt={item.nombre}/></div>

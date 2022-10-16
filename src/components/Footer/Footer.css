@@ -1,0 +1,28 @@
+.imgFooter {
+    height: 15px;
+}
+
+.lista li {
+    text-align-last: left;
+    margin-left: 100px;
+}
+
+.lista li:hover {
+    text-align-last: left;
+    text-decoration: underline;
+    
+
+}
+
+.listaLink {
+    color: white;
+    text-decoration: none;
+}
+.listaLink:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.containerFooter {
+    height: 100px;
+}

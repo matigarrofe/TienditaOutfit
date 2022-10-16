@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import {db} from '../../utils/firebase'
 import './style.css'
 import { collection, addDoc, doc, updateDoc } from 'firebase/firestore';
+import Swal from 'sweetalert2'
 
 export const CartContainer = () => {
   const {productCartList, removeItem, clear, getTotalPrecio} = useContext(CartContext);
@@ -39,10 +40,19 @@ export const CartContainer = () => {
       total:80
     }).then(response=>console.log(response))
   }
+  const mostrarAlerta=()=>{
+    Swal.fire({
+      position: 'top-center',
+      icon: 'success',
+      title: 'Tu orden fue enviada',
+      showConfirmButton: false,
+      timer: 1500
+    })
+   }
 
 
   return (
-    <div className='container'>
+    <div className='containerCarrito'>
      <button className='btn btn-sm bg-success text-white' onClick={updateOrder}>Actualizar orden</button>
       {idOrder ?
         <>
@@ -52,36 +62,34 @@ export const CartContainer = () => {
           </Link>
         </>
         :
-        <div className='container'>
+        <div className='containerCarrit'>
           {
             productCartList.length > 0 ?
             <div className='container'>
               {productCartList.map(item=>(
-                <div style={{border:"1px solid red",  width:"200px"}}>
+                <div style={{ width:"200px"}}>
                   <p><strong>{item.nombre}</strong></p>
-                  <img src={item.pictureUrl} style={{border:"1px solid black",  width:"80%", height:'250px'}}/>
+                  <img src={item.pictureUrl} style={{width:"80%", height:'250px'}}/>
                   <p>Cantidad: {item.quantity}</p>
-                  <p>Precio unitario: ${item.precio}</p>
-                  <p>Precio productos: ${item.quantityPrice}</p>
+                  <p>Total: ${item.quantityPrice}</p>
                   <button className='btn btn-sm bg-danger text-white' onClick={()=>removeItem(item.id)}>Eliminar producto</button>
                 </div>
               ))}
               <button className='btn btn-sm bg-primary text-white' onClick={clear}>Vaciar el carrito</button>
               <p>Precio total: ${getTotalPrecio()}</p>
-              <form onSubmit={sendOrder}>
-                <label>Nombre: </label>
-                <input type="text" />
-                <label>Telefono: </label>
-                <input type="text" />
-                <label>Correo: </label>
-                <input type="email" />
-                <button className='btn btn-sm bg-primary text-white' type='submit'>Enviar orden</button>
+              <form  className='formulario mb-5' onSubmit={sendOrder}>
+                <h4 className='text-white'>Datos de la orden</h4>
+                <input className='controls' type="text" placeholder='Ingrese su Nombre'/>
+                <input className='controls' type="text" placeholder='Ingrese su Apellido'/>
+                <input className='controls' type="tel" placeholder="Ingrese su Telefono"/>
+                <input className='controls' type="email" placeholder='Ingrese su Correo'/>
+                <button onClick={()=>mostrarAlerta()} className='botonEnviar' type='submit' >Enviar orden</button>
               </form>
             </div>
             :
               <>
-                <p>El carrito esta vacio, Agrega algun producto</p>
-                <Link to="/">
+                <p className='pt-5'>El carrito esta vacio, Agrega algun producto</p>
+                <Link className='pb-5' to="/">
                   Ir al listado de productos
                 </Link>
               </>

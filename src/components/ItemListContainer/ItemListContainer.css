@@ -5,6 +5,15 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background: rgba(237, 237, 237, 0.82);
+    background: #fff;
     padding: 10px 0;
 }
+
+.titulo {
+    text-align: left; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif Black; 
+    font-weight: bold; 
+    font-size: 40px; 
+    color: black; 
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    }
