@@ -33,13 +33,11 @@
 }
 .navegacion a{
     margin: 10px;
-    color: #86868b;
     text-decoration: none;
 }
 .navegacion a:hover{
     margin: 10px;
-    color: white;
-    text-decoration: underline;
+    text-decoration: underline!important;
     cursor: pointer;
 }
 
@@ -54,4 +52,14 @@
     text-decoration: none!important;
     font-size: 32px;
     padding-left: 25px;
+}
+
+
+.claseActive {
+    color: #fff;
+
+}
+
+.claseInactive {
+    color: #86868b;
 }

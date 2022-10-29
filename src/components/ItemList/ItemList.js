@@ -1,6 +1,5 @@
 import { Item } from "../Item/Item"
 import './ItemList.css';
-
 export const ItemList = ({items})=>{
 
     return(
@@ -11,6 +10,7 @@ export const ItemList = ({items})=>{
                     <Item key={producto.id} item={producto}/>
                 ))
             }
+            
         </div>
     )
 }

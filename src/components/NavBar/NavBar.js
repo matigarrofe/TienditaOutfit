@@ -1,7 +1,8 @@
 import { CartWidget } from "../CartWidget/CartWidget"
 import './NavBar.css';
 import Cart from '../Cart/Cart'
-import {Link} from 'react-router-dom';
+import {NavLink, Link} from 'react-router-dom';
+
 
 
 
@@ -20,15 +21,15 @@ export const Navbar = () =>{
                 </Link>
             </div>
             <div className='navegacion'>
-                <Link to="/">Inicio</Link>
-                <Link to="/productos/buzos">Buzo</Link>
-                <Link to="/productos/camisas">Camisa</Link>
-                <Link to="/productos/pantalones">Pantalon</Link>
-                <Link to="/productos/sacos">Saco</Link>
+                <NavLink className={({isActive})=>isActive ? "claseActive" : "claseInactive"} to="/">Inicio</NavLink>
+                <NavLink className={({isActive})=>isActive ? "claseActive" : "claseInactive"} to="/productos/buzos">Buzo</NavLink>
+                <NavLink className={({isActive})=>isActive ? "claseActive" : "claseInactive"} to="/productos/camisas">Camisa</NavLink>
+                <NavLink className={({isActive})=>isActive ? "claseActive" : "claseInactive"} to="/productos/pantalones">Pantalon</NavLink>
+                <NavLink className={({isActive})=>isActive ? "claseActive" : "claseInactive"} to="/productos/sacos">Saco</NavLink>
                 
             </div>
             <div>
-                <CartWidget/>
+                <CartWidget className={({isActive})=>isActive ? "claseActive" : "claseInactive"}/>
             </div>
         </nav>
        
